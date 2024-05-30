@@ -7,19 +7,16 @@ import java.net.http.HttpClient;
 import java.io.IOException;
 import java.net.URISyntaxException;
 
+
 public class HttpClientConected {
 
-    public static void main(String[] args) {
-        int cantidad = 5;
-        String monedaBase = "USD";
-        String moneda2 = "MXN";
-
+    public String Moneda(Moneda moneda) {
 
         // clave API
         String key = "fa894bebbc2f75dbc7cba87d"; // clave api
         // URL para la solicitud de la API
-        String direccion = "https://v6.exchangerate-api.com/v6/" + key + "/pair/"+monedaBase+"/"+moneda2+"/"+cantidad; // url de búsqueda
-
+        String direccion = "https://v6.exchangerate-api.com/v6/" + key + "/pair/" + moneda.getMonedaBase() + "/" + moneda.getMonedaDeCambio() + "/" + moneda.getCantidad(); // url de búsqueda
+        System.out.println(direccion);
         try {
             // Crear el HttpClient
             HttpClient client = HttpClient.newHttpClient();
@@ -36,10 +33,12 @@ public class HttpClientConected {
             // Obtener el cuerpo de la respuesta como una cadena
             String json = response.body();
 
-            // Imprimir la respuesta JSON
-            System.out.println(json);
+
+            return json;
+
         } catch (URISyntaxException | IOException | InterruptedException e) {
             e.printStackTrace();
+            return ""; // Manejo de errores, retornar un valor predeterminado en caso de error
         }
     }
 }
