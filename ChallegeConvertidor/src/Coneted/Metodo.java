@@ -1,5 +1,6 @@
 package Coneted;
 
+<<<<<<< HEAD
 import Objetos.Moneda;
 import java.util.Scanner;
 
@@ -34,4 +35,8 @@ public class Metodo {
             System.out.println("Error al obtener el tipo de cambio.");
         }
     }
+=======
+public class Metodo {
+
+>>>>>>> 6ac4398a658ba8a26d62653b2c2e893bff852584
 }
