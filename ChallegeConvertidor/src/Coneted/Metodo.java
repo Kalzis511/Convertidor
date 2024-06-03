@@ -1,6 +1,5 @@
 package Coneted;
 
-<<<<<<< HEAD
 import Objetos.Moneda;
 import java.util.Scanner;
 
@@ -10,9 +9,15 @@ public class Metodo {
 
         // Solicitar al usuario que ingrese las monedas base y de cambio, así como la cantidad
         System.out.println("Ingrese la moneda base (por ejemplo, USD):");
+        System.out.println(" ***************** Escriba en texto la moneda ***************************");
+        ListMoaned.lista();
+        System.out.println(" *************** Escriba en texto la moneda *******************");
         String monedaBase = scanner.nextLine();
 
         System.out.println("Ingrese la moneda de cambio (por ejemplo, MXN):");
+        System.out.println(" ********************************************");
+        ListMoaned.lista();
+        System.out.println(" Ingrese la moneda de cambio (por ejemplo, MXN*");
         String monedaCambio = scanner.nextLine();
 
         System.out.println("Ingrese la cantidad:");
@@ -35,8 +40,5 @@ public class Metodo {
             System.out.println("Error al obtener el tipo de cambio.");
         }
     }
-=======
-public class Metodo {
-
->>>>>>> 6ac4398a658ba8a26d62653b2c2e893bff852584
 }
+

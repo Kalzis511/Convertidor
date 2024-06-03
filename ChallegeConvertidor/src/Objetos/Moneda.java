@@ -52,12 +52,10 @@ public class Moneda {
 
     @Override
     public String toString() {
-        return "Moneda{" +
-                "monedaBase='" + monedaBase + '\'' +
-                ", monedaDeCambio='" + monedaDeCambio + '\'' +
-                ", cantidad=" + cantidad +
+        return "{" +
+                "monedaBase='" + monedaBase + " "+
+                ", monedaDeCambio='" + monedaDeCambio + " " +
                 ", tazaDeCambio=" + tazaDeCambio +
-                ", resultado=" + resultado +
-                '}';
+                ", resultado=" + resultado +" "+getMonedaDeCambio()+ '}';
     }
 }
